@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+:root {
+  --Verydarkblue: hsl(233, 47%, 7%);
+  --Darkdesaturatedblue: hsl(244, 38%, 16%);
+  --Softviolet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+  --Slightlytransparentwhite2: hsla(0, 0%, 100%, 0.6);
+  --layer: rgba(110, 30, 160, 0.7);
+}
+* {
+  font-family: "Inter", sans-serif;
+  user-select: none;
+}
+section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--Verydarkblue);
+}
+.card {
+  background-color: var(--Darkdesaturatedblue);
+  border-radius: 10px;
+  margin: 1.5rem;
+  overflow: hidden;
+}
+.content {
+  display: grid;
+  text-align: center;
+  margin: 2em;
+  gap: 2em;
+}
+.header {
+  display: block;
+  width: 100%;
+}
+.header-d {
+  display: none;
+}
+figure {
+  position: relative;
+}
+#layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--layer);
+}
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--White);
+  margin: auto;
+  /* width: 260px; */
+}
+p {
+  color: var(--Slightlytransparentwhite);
+  font-size: 15px;
+  line-height: 25px;
+  /* width: 260px; */
+  margin: auto;
+}
+.stats-h {
+  color: var(--Slightlytransparentwhite2);
+  text-transform: uppercase;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.stats {
+  display: grid;
+  gap: 2em;
+}
+.stats p {
+  color: var(--White);
+  font-size: 24px;
+  font-weight: 700;
+}
+.insight {
+  color: var(--Softviolet);
+}
+
+@media (min-width: 850px) {
+  .card {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .content {
+    text-align: start;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 3em;
+    gap: 0em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+  .header {
+    display: none;
+  }
+  .header-d {
+    display: block;
+    width: 100%;
+  }
+}
